@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>手机记牌器—自动记牌器官网</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="Keywords" Content="记牌器,斗地主,跑得快">
-    <meta name="Description" Content="自动记牌器是一款安全好用的安卓手机记牌器,斗地主记牌器,跑得快记牌器,支持近百款主流斗地主,跑得快游戏。">
+    <title>秒记王官网—安全好用的手机记牌器!</title>
 </head>
 <body>
 <style type="text/css">
@@ -44,22 +42,21 @@
     <img style="float: right;max-width: 18%" src="img/pattern_right.png">
 
     <div style="text-align: center; width: 100%">
-        <img src="img/icon.png" style="margin: 2rem auto 0;">
-        <div style="font-size: x-large;">自动记牌器</div>
+        <img src="img/icon_wang.png" style="margin: 2rem auto 0;">
+        <div style="font-size: x-large;">秒记王</div>
         <div style="margin-top: 2rem">
             <a style="font-size:large;text-decoration:none;" class="down_button"
                onclick="checkDownload()" href="javascript:void(0);">下载安装</a>
             <a hidden="hidden" style="font-size:large;text-decoration:none;" class="down_button"
                id="down_button"
-               href="https://wukong-counter.oss-cn-shenzhen.aliyuncs.com/counter2/apk/latest.apk">下载安装</a>
+               href="https://wukong-counter.oss-cn-shenzhen.aliyuncs.com/oem/wcxnqp/apk/latest.apk">下载安装</a>
         </div>
         <p style="margin-top: 4rem;font-size: large">软件介绍</p>
 
-        <p class="hint" style="margin-left: 2rem;margin-right: 2rem">
-            自动记牌器是一款安卓棋牌类辅助应用，支持近百款主流斗地主，跑得快游戏。无需ROOT即可自动记录各个玩家出牌情况，统计剩余牌数。</p>
+        <p class="hint" style="margin-left: 2rem;margin-right: 2rem">秒记王是一款安卓棋牌类辅助应用，支持数款打拱游戏。无需ROOT即可自动记录各个玩家出牌情况，统计剩余牌数。</p>
         <div style="margin-top: 2rem">
-            <p class="hint">客服QQ 208872447</p>
-            <a href="mqqwpa://im/chat?chat_type=wpa&uin=208872447&version=1&src_type=web">联系客服</a>
+            <p class="hint">客服QQ 854851188</p>
+            <a href="mqqwpa://im/chat?chat_type=wpa&uin=854851188&version=1&src_type=web">联系客服</a>
         </div>
 
 
@@ -103,29 +100,12 @@
         if (isWeixin) {
             loadHtml();
             loadStyleText(cssText);
-        } else {
+        }else {
             var a = document.getElementById('down_button');
             var event = new MouseEvent('click');
             a.dispatchEvent(event);
         }
     }
-
-    (function () {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-    (function(){
-        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?693ad0b43cd390480b2c227d134a7d94":"https://jspassport.ssl.qhimg.com/11.0.1.js?693ad0b43cd390480b2c227d134a7d94";
-        document.write('<script src="' + src + '" id="sozz"><\/script>');
-    })();
 </script>
 </body>
 </html>
