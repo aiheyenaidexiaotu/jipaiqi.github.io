@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手机自动记牌器—记牌精灵官网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="Keywords" Content="记牌器,斗地主,跑得快">
+    <meta name="Description" Content="自动记牌器是一款安全好用的安卓手机记牌器,斗地主记牌器,跑得快记牌器,支持近百款主流斗地主,跑得快游戏。">
+</head>
+<body>
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .img_tip {
+        max-width: 100%;
+        height: auto;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .down_button {
+        color: white;
+        border-radius: 0.2rem;
+        background: #fe8362;
+        padding: 0.5rem 1rem;
+    }
+
+    .hint {
+        color: #a9b1b3;
+        font-size: small;
+        margin: 0.2rem 2rem;
+        text-decoration: none;
+    }
+
+</style>
+<div class="download">
+    <img style="float: left;max-width: 18%" src="img/pattern_left.png">
+    <img style="float: right;max-width: 18%" src="img/pattern_right.png">
+
+    <div style="text-align: center; width: 100%">
+        <img src="img/icon.png" style="margin: 2rem auto 0;">
+        <div style="font-size: x-large;">记牌精灵</div>
+        <div style="margin-top: 2rem">
+            <a style="font-size:large;text-decoration:none;" class="down_button"
+               onclick="checkDownload()" href="javascript:void(0);">下载安装</a>
+            <a hidden="hidden" style="font-size:large;text-decoration:none;" class="down_button"
+               id="down_button"
+               href="https://wukong-counter.oss-cn-shenzhen.aliyuncs.com/oem/lhdzd/apk/latest.apk">下载安装</a>
+        </div>
+        <p style="margin-top: 4rem;font-size: large">软件介绍</p>
+
+        <p class="hint" style="margin-left: 2rem;margin-right: 2rem">
+            记牌精灵是一款安卓棋牌类辅助应用，此定制版支持莲花打炸弹游戏。无需ROOT即可自动记录各个玩家出牌情况，统计剩余牌数。</p>
+        <div style="margin-top: 2rem">
+            <p class="hint">客服QQ 208872447</p>
+            <a href="mqqwpa://im/chat?chat_type=wpa&uin=208872447&version=1&src_type=web">联系客服</a>
+        </div>
+
+
+    </div>
+</div>
+<script type="text/javascript">
+    function is_weixin() {
+        var ua = navigator.userAgent.toLowerCase();
+        return ua.match(/MicroMessenger/i) == "micromessenger";
+    }
+
+    function is_mobileQQ() {
+        var ua = navigator.userAgent.toLowerCase();
+        return ua.match(/\sQQ/i) == " qq" && /iphone/i.test(ua) == false;
+    }
+
+    var isWeixin = is_weixin() || is_mobileQQ();
+
+    function loadHtml() {
+        var div = document.createElement('div');
+        div.id = 'weixin-tip';
+        div.innerHTML = '<p><img class="img_tip" src="img/live_weixin.png" alt="在浏览器中打开"/></p>';
+        document.body.appendChild(div);
+    }
+
+    function loadStyleText(cssText) {
+        var style = document.createElement('style');
+        style.rel = 'stylesheet';
+        style.type = 'text/css';
+        try {
+            style.appendChild(document.createTextNode(cssText));
+        } catch (e) {
+            style.styleSheet.cssText = cssText; //ie9以下
+        }
+        var head = document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+        head.appendChild(style);
+    }
+
+    function checkDownload() {
+        var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+        if (isWeixin) {
+            loadHtml();
+            loadStyleText(cssText);
+        } else {
+            var a = document.getElementById('down_button');
+            var event = new MouseEvent('click');
+            a.dispatchEvent(event);
+        }
+    }
+
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    (function(){
+        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?693ad0b43cd390480b2c227d134a7d94":"https://jspassport.ssl.qhimg.com/11.0.1.js?693ad0b43cd390480b2c227d134a7d94";
+        document.write('<script src="' + src + '" id="sozz"><\/script>');
+    })();
+</script>
+</body>
+</html>
